@@ -63,7 +63,7 @@ patch \
 groff-base \
 mtr \
 language-pack-zh-hans
-RUN unminimize | yes
+RUN yes | unminimize
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 RUN locale-gen zh_CN.UTF-8
 RUN update-locale LANG=zh_CN.UTF-8 LC_ALL=zh_CN.UTF-8
