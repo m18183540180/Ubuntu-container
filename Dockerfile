@@ -65,9 +65,6 @@ mtr \
 language-pack-zh-hans
 RUN yes | unminimize && apt remove unminimize -y
 RUN curl -fsSL https://code-server.dev/install.sh | sh
-RUN code-server --install-extension MS-CEINTL.vscode-language-pack-zh-hans
-RUN mkdir -p ~/.local/share/code-server
-RUN printf '{"locale":"zh-cn"}\n' > /root/.local/share/code-server/argv.json
 RUN locale-gen zh_CN.UTF-8
 RUN update-locale LANG=zh_CN.UTF-8 LC_ALL=zh_CN.UTF-8
 RUN mkdir -p /etc/services.d/code-server; \
